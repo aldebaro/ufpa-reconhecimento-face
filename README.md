@@ -2,6 +2,7 @@
 Reconhecimento (mais especificamente, faremos apenas a "verificação", a qual corresponde a uma classificação binária) de faces usando Octave ou Matlab [5], baseado na técnica "eigenfaces" [2].
 
 Referências:
+
 [1] TCC da UFPA, "Estudo e implementação de técnicas de processamento de imagens aplicadas em reconhecimento de face",
 orientador: prof. Ronaldo Zampolo, autora: Janize Monteiro de Castilho,
 disponível em http://laps.ufpa.br/zampolo/ensino/tcc.html
