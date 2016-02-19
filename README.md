@@ -1,5 +1,5 @@
 # ufpa-reconhecimento-face
-Reconhecimento (verificação) de faces usando a técnica "eigenfaces"
+Reconhecimento (mais especificamente, faremos apena a verificação, que é uma classificação binária) de faces usando a técnica "eigenfaces"
 
 Uma referência é o TCC:
 "Estudo e implementação de técnicas de processamento de imagens aplicadas em reconhecimento de face",
