@@ -1,1 +1,0 @@
-function G = urf_cvtCinza(I, largura, altura)
