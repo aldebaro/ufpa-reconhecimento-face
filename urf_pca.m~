@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function PCA = urf_pca(X, num_components)
   % faz a análise de PCA nos vetores em X
   %
@@ -12,3 +13,10 @@ function PCA = urf_pca(X, num_components)
   %   .num_components: ó número de componentes utilizados nessa análize
   %   .mu: um vetor com a imagem média de |X|
 end
+=======
+[x,y] = function ahuahauh (dhjushdu,audjuah,adjau)
+    ofhodhofjdl
+    fdjdgjnosnogn
+    gdsnkdgsngknsl
+    
+>>>>>>> 7d5dc5d1c007af98e3c3d89d6179f4986ba015c3
