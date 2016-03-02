@@ -1,20 +1,16 @@
-% Copyright (c) Philipp Wagner. All rights reserved.
-% Licensed under the BSD license. See LICENSE file in the project root for full license information.
-
-function [X y width height names] = read_images(path)
-	%% Read images from a given path and return the Imagematrix X.
-	%%
-	%% Returns:
-	%%  X [numDim x numSamples] Array with images given in columns -- [X1,X2,...,Xn]
-	%%  y [1 x numSamples] Classes corresponding to images of X. -- [y1,y2,...,yn]
-	%%  width [int] width of the images
-	%%  height [int] height of the images
-	%%  names [cell array] folder name of each class, so names{1} is the name of class 1
+function [X y width height names] = read_images(path) %$ a principal função responsável pela leitura das imagens no diretório
+	%% Lê as imagens de um dado diretório e retorna a Imagematrix X
+	%% retorna:
+	%%  X [numDim x numSamples] array com as imagens organizadas em colunas
+	%%  y [1 x numSamples] Classes correspondendo as imagenss de X -- [y1,y2,...,yn]
+	%%  width [int] largura das imagens
+	%%  height [int] altura das imagens
+	%%  names [cell array] nome do diretório de cada classe
 	%%
 	%% Example:
-	%% 	[X y width height names] = read_images("./data/yalefaces")
+	%% [X y width height names] = read_images("./data/yalefaces")
 	%%
-	folder = list_files(path);
+	folder = list_files(path); %% folder recebe o caminho do diretório das imagens
 	X = [];
 	y = [];
 	names = {};
@@ -22,15 +18,14 @@ function [X y width height names] = read_images(path)
 	for i=1:length(folder)
 		subject = folder{i};
 		images = list_files([path, filesep, subject]);
-		if(length(images) == 0)
-			continue; %% dismiss files or empty folder
+		if(length(images) == 0) %% verifica se o diretório não tem imagens
+			continue; 
 		end
    
 		added = 0;
 		names{n} = subject;
-		%% build image matrix and class vector
+		%% constrói a matriz de imagens e a classe dos vetores
 		for j=1:length(images)
-			%% absolute path
 			filename = [path, filesep, subject, filesep, images{j}]; 
 
 			%% Octave crashes on reading non image files (uncomment this to be a bit more robust)
