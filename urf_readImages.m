@@ -1,4 +1,4 @@
-function [X y width height names] = urf_read_Images(path) %$ a principal função responsável pela leitura das imagens no diretório
+function [X y width height names] = urf_readImages(path) %$ a principal função responsável pela leitura das imagens no diretório
 	%% Lê as imagens de um dado diretório e retorna a Imagematrix X
 	%% retorna:
 	%%  X [numDim x numSamples] array com as imagens organizadas em colunas
