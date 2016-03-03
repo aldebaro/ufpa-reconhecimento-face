@@ -1,10 +1,10 @@
-% load function files from subfolders aswell
+% arquivos de função de carga de subpastas da cabeceira
 addpath (genpath ('.'));
 
-% load data
+% carregando arquivo
 [X y width height names] = read_images('/path/to/att');
 
-% Learn Eigenfaces with 100 components
+% ler as Eigenfaces com 100 componentes
 fun_eigenface = @(X,y) eigenfaces(X,y,30);
 fun_predict = @(model, Xtest) eigenfaces_predict(model,Xtest,1);
 
