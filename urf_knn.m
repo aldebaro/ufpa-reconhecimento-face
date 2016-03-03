@@ -1,4 +1,4 @@
-function c = knn(P, y, Q,  k)
+function c = urf_knn(P, y, Q,  k)
 %avisa qual a coluna da imagem que está mais perto da que está sendo analisada
 %entra com: 
 %        P = matriz das imagens de treino que estao no banco de dados
