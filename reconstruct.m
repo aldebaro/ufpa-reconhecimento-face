@@ -1,20 +1,34 @@
-% Copyright (c) Philipp Wagner. All rights reserved.
-% Licensed under the BSD license. See LICENSE file in the project root for full license information.
-
-function X = reconstruct(W, Y, mu)
-    %%  Reonstruct Y from X using W, pass mu to adjust mean.
+funcao X = reconstrucao(W, Y, mu)
+    %%  Recupera Y de X usando W,  mu pode ajudar a ajustar a média.
     %%
-    %%  Args:
-    %%    Y [num_components x num_data] projection
-    %%    W [dim x num_components] transformation matrix
-    %%    mu [dim x 1] sample mean (optional)
+    %%  Argumentos:
+    %%    C [Número de componentes x Número de informações] projeção
+    %%    D [Dimenção x Número de componentes] matriz transformada
+    %%    mu [Dimenção x 1] média simples (opicional) (Somatoria de até N dividido por N)
     %%
-    %%  Returns:
-    %%    X [dim x num_data] reconstruct data
+    %%  Retornos:
+    %%    X [Dimenção x Núemro de informações] Informação reconstruida
     %%
-    if(nargin<3)
-        X = W * Y;
-    else
+    
+    switch nargin     %% Verifica Quantos argumentos foram passados para a função
+    case 2            %% Caso apenas dois argumentos tenham sido passados (A projeção e a matriz transformada
+                      %% Multiplica a projeção com a matriz para se recuperar a informação (face)
+         X = W * Y;   
+    case 3            %% Caso três argumentos argumentos tenham entrado, a projeção, a matriz e mais a média simples
+                      %% Recupera a informação como no caso anterior e soma as informações que mais se repetem (mais marcantes)
         X = W*Y +repmat(mu,size(Y,2),1);
-    end
-end
+    otherwise        %% Caso nem um argumento tenha sido passado retorna se 0.
+        x = 0;
+    endswitch
+
+    
+    
+    
+    
+ %% Código com "if" do ByteFish   
+ %%   if(nargin<3)    %%Verifica se foram passados menos de três argumentos para a função
+ %%       X = W * Y;  %% Multiplica a projeção com a matriz para se recuperar a informação (face)
+ %%   else
+ %%       X = W*Y +repmat(mu,size(Y,2),1); %% Recupera a informação como no caso anterior e soma as informações que mais se repetem (mais marcantes)
+ %%   end
+ %% end
