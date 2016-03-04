@@ -31,7 +31,7 @@ function L = lbp(X, raio, vizinhaca)
 		cy = ceil(y);
 		% Calcula as partes fracionárias, subtranindo do numero original o seu numero imediatamente menor.
 		pfx = x - fx;
-		pfy = y - fy;
+		pf	y = y - fy;
 		% Calculando pesos de interpolação
 		p1 = (1 - tx) * (1 - ty);
 		p2 =      tx  * (1 - ty);
@@ -39,7 +39,7 @@ function L = lbp(X, raio, vizinhaca)
 		p4 =      tx  *      ty ;
 		% Adquirindo a imagem interpolada
 		N = w1*X(fy:fy+dy,fx:fx+dx) + w2*X(fy:fy+dy,cx:cx+dx) + w3*X(cy:cy+dy,fx:fx+dx) + w4*X(cy:cy+dy,cx:cx+dx);
-		% Calcula o valor binario refente a vizinhaça correspondente e atualiza o resultado.
+		% Calcula o padrão binário local refente a vizinhaça correspondente e atualiza o resultado.
 		L += (N>=C)*(2^(n-1));
 	end
 end
