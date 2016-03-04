@@ -8,7 +8,7 @@ function L = lbp(X, raio, vizinhaca)
 	%%
 	X = double(X);
 	% adquirir origem do bloco	
-	origy = raio+1;
+	origemy = raio+1;
 	origemx = raio+1;
 	% Blocos para processamento
 	dy = size(X,1)-(2*raio+1);
@@ -30,13 +30,13 @@ function L = lbp(X, raio, vizinhaca)
 		cx = ceil(x);
 		cy = ceil(y);
 		% Calcula as partes fracionárias, subtranindo do numero original o seu numero imediatamente menor.
-		tx = x - fx;
-		ty = y - fy;
+		pfx = x - fx;
+		pfy = y - fy;
 		% Calculando pesos de interpolação
-		w1 = (1 - tx) * (1 - ty);
-		w2 =      tx  * (1 - ty);
-		w3 = (1 - tx) *      ty ;
-		w4 =      tx  *      ty ;
+		p1 = (1 - tx) * (1 - ty);
+		p2 =      tx  * (1 - ty);
+		p3 = (1 - tx) *      ty ;
+		p4 =      tx  *      ty ;
 		% Adquirindo a imagem interpolada
 		N = w1*X(fy:fy+dy,fx:fx+dx) + w2*X(fy:fy+dy,cx:cx+dx) + w3*X(cy:cy+dy,fx:fx+dx) + w4*X(cy:cy+dy,cx:cx+dx);
 		% Calcula o valor binario refente a vizinhaça correspondente e atualiza o resultado.
