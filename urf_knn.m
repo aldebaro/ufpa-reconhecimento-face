@@ -6,6 +6,6 @@ function c = urf_knn(P, y, Q,  k)
 %        Q = vetor imagem de teste
 %        k = numero de imagens a ser analisadas
 %sai com:
-%       c = posiçao da coluna na matriz que tem mais semelhanças com a imagem sendo analisada
+%       C = posiçao da coluna na matriz que tem mais semelhanças com a imagem sendo analisada
 
 end
