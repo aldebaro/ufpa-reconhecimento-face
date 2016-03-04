@@ -5,7 +5,7 @@ function G = urf_cvtCinza(I, largura, altura)
 % I vai é a imagem que virá de outra função e será transformada para preto e branco
 % Altura e Largura são as dimensões da imagem 
 
-G = remodelar(normalizar(I, 0, 255), altura, largura);
+G = reshape(normalizar(I, 0, 255), altura, largura);
 
 % O remodelar tem a função de fazer um vetor de dimensões NxM se transformar em uma matriz de dimensões AxB
 % Normatizar vai fazer com que os valor da matriz fiquem limitados de 0 a 255
