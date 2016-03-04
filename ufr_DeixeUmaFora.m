@@ -1,0 +1,2 @@
+// baseado na LeaveOneOutCV.m
+function idx = ufr_DeixeUmaFora(X, y, fun_train, fun_predict, print_debug)// nomes de algumas funcoes ainda em ingles pois elas sao de outras equipes, mudaremos no futuro.

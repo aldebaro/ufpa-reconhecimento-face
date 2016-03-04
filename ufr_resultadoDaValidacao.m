@@ -1,0 +1,2 @@
+// baseado na KFoldCV.m
+function idx = ufr_resultadoDaValidacao(X, y, k, fun_train, fun_predict, per_fold, print_debug) // nomes de algumas funcoes ainda em ingles pois elas sao de outras equipes, mudaremos no futuro.

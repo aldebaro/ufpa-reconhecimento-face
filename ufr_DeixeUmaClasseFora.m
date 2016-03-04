@@ -1,0 +1,2 @@
+//baseado na LeaveOneClassOutCV.m
+function idx = ufr_DeixeUmaClasseFora(X, y, g, fun_train, fun_predict, print_debug)// nomes de algumas funcoes ainda em ingles pois elas sao de outras equipes, mudaremos no futuro.
