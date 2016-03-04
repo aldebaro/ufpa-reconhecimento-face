@@ -5,7 +5,7 @@ function C = urf_eigenfacesPredict (model, Xtest, k)
 %       xtest = vetor da imagem que está sendo analisada
 %       k = numero de imagens a ser analisadas
 %sai com:
-%       c = posiçao da coluna na matriz que tem mais semelhanças com a imagem sendo analisada
+%       C = posiçao da coluna na matriz que tem mais semelhanças com a imagem sendo analisada
 
 	Q = model.W' * (Xtest - model.mu);  %multiplica os autovetores pela matriz com as eigenfaces
 	C = knn(model.P, model.y, Q, k);    %chama a função knn usando como parâmetros:
