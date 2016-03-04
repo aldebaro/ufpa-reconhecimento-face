@@ -1,5 +1,5 @@
 funcao X = reconstrucao(P, M, ms)
-    %%  Recupera Y de X usando W,  mu pode ajudar a ajustar a média.
+    %%  Recupera X de M usando Y,  mu pode ajudar a ajustar a média.
     %%
     %%  Argumentos:
     %%    P [Número de componentes x Número de informações] projeção
