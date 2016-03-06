@@ -1,0 +1,15 @@
+
+Nomear sua função como:
+    urf_(resto do nome) OK
+Deixar todas as informações em português // Nome das funções podem sofrer alterações.
+Especificar o nome da função, os parâmetros e o retorno da função
+Usar CamelCase em nomes compostos
+
+Obs; cada membro da equipe ficara responsável pela implementação de uma das três funções (exceto o líder que não pode escrever codigo nesse trabalho).
+Por favor coloquem o nome abaixo para saber quem fará cada parte no codigo.
+
+ufr_ResultadoDaValidacao.m // (jamellyfreitas)
+ufr_DeixeUmaClasseFora.m // (seu nome aqui)
+ufr_DeixeUmaFora.m // (Dilton Vilhena)
+
+Ps: Codigo base na pasta validation.
