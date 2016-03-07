@@ -1,0 +1,54 @@
+function c = urf_knn(P, y, Q,  k)
+%avisa qual a coluna da imagem que está mais perto da que está sendo analisada
+%entra com: 
+%        P = é a matriz das imagens de treino que estão localizadas no no banco de dados
+%        y = é o número de imagens que tem em P
+%        Q = é o vetor imagem de teste
+%        k = representa o número de imagens que precisam ser analisadas
+%sai com:
+%       C = posição da coluna na matriz que tem mais semelhanças com a imagem sendo analisada
+
+end
+
+knn(train, test, cl, k = 1, l = 0, prob = FALSE, use.all = TRUE) => para testar antes de rodar a função
+
+D = Sqrt[(48-33)^2 + (142000-150000)^2] = 8000.01  >> Default=Y
+Ao executar isso, ajustando os valores, se acha a distância euclediana. 
+O problema é que não faço a menor ideia de como se faz isso.
+O problema é que eu não faço ideia do que EU FIZ.
+
+Store the output values of the  nearest neighbors to query scenario  in vector  by repeating the following loop times: 
+a. Go to the next scenario  in the data set, where  is the current iteration within the domain  
+b. If P is not set or :  
+c. Loop until we reach the end of the data set (i.e. ) 
+d. Store P into vector k and y into vector  
+2. Calculate the arithmetic mean output across r
+3. Return  as the output value for the query scenario Q
+
+Isso é também outra forma de rodar a função. Minha justificativa é nenhuma,
+a não ser que sou péssimo e neste momento quero me jogar na frente do Circular.
+Sério, eu não sei o que eu fiz.
+Eu sou burro.
+
+	A1=c(0,0)
+	A2=c(1,1)
+	A3=c(2,2)
+ 
+	B1=c(6,6)
+	B2=c(5.5,7)
+	B3=c(6.5,5)
+ 
+train=rbind(A1,A2,A3, B1,B2,B3)
+ 
+cl=factor(c(rep("A",3),rep("B",3)))
+
+test=c(4, 4)
+
+library(class)
+
+summary(knn(train, test, cl, k = 1))
+ 
+end
+
+Isso supostamente é outra forma de chegar a um resultado. 
+Eu mencionei que ainda não sei mexer no Matlab? É. Não sei. HAHA. :(
