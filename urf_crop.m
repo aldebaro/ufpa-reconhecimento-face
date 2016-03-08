@@ -1,24 +1,33 @@
+% Copyright (c) Philipp Wagner. All rights reserved.
+% Licensed under the BSD license. See LICENSE file in the project root for full 
+% license information.
+
 function crop(filename, eye0, eye1, top, left, dsize)
 	%% Rotates an image around the eyes, resizes to destination size.
+  %% Rotaciona uma imagem em torno dos olhos, redimensiona para o tamanho do 
+  %% destino.
 	%%
-	%% Assumes a filename is structured as ".../subject/image.extension", so that
-	%% images are saved in a the folder (relative to where you call the script):
-	%% 	"crop_<subject>/crop_<filename>"
+  %% Assume um nome de arquivo estruturado ".../sujeito/imagem.extensao", assim 
+  %% que as imagens sao salvas em uma pasta (relativa para onde você chama o 
+	%% script):	"crop_<sujeito>/crop_<nome_do_arquivo>"
 	%%
 	%% Args:
+  %% Argumentos:
 	%%	filename: Image to preprocess.
-	%%	eye0: [x,y] position of the left eye
-	%%	eye1: [x,y] position of the right eye
-	%%	top: percentage of offset above the eyes
-	%%	left: percentage of horizontal offset 
-	%%	dsize: [width, height] of destination filesize
+  %%  nome do arquivo: imagem para preprocessar
+	%%	eye0: [x,y] posição do olho esquerdo
+	%%	eye1: [x,y] posição do olho direito
+  %%  top: percentual de deslocamento acima dos olhos 
+  %%  left: percentual de deslocamento horizontal
+	%%	dsize: [largura, altura] de destinação tamanho do arquivo
 	%%
 	%% Example:
-	%% crop("/path/to/file", [300, 100], [380, 110], 0.3, 0.2, [70,70])
+  %% Exemplo:
+	%% crop("/caminho/para/arquivo", [300, 100], [380, 110], 0.3, 0.2, [70,70])
 	%% 
-	%% Leaves 21px offset above the eyes (0.3*70px) and 28px horizontal
-	%% offset. 20% of the image to the left eye, 20% to the right eye
-	%% (2*0.2*70=28px).
+  %% Folhas 21 pixels deslocadas acima dos olhos (0.3*70 pixels) e 28 pixels
+	%% deslocados na horizontal. 20% da image para o olho esquerdo, 20% para o
+	%% olho direito(2*0.2*70=28 pixels).
 	
 	basename = sprintf("%s",strsplit(strsplit(filename, filesep){end}, "."){:})
 	subject = ["crop_",strsplit(filename, filesep){end - 1}]
