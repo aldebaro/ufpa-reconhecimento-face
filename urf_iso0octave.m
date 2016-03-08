@@ -1,12 +1,13 @@
-% arquivos de função de carga de subpastas da cabeceira
-addpath (genpath ('.'));
+% Copyright (c) Philipp Wagner. All rights reserved.
+% Licensed under the BSD license. See LICENSE file in the project root for full license information.
 
-% carregando arquivo
-[X y width height names] = read_images('/path/to/att');
+function in = isoctave ()
+%% retorna TRUE se o script está rodando no GNU Octave (Compativel com MATLAB 7.2)
+%% http://octave.1599824.n4.nabble.com/How-to-determine-if-you-are-in-octave-or-matlab-td1624960.html
+ persistent inout;
 
-% ler as Eigenfaces com 100 componentes
-fun_eigenface = @(X,y) eigenfaces(X,y,30);
-fun_predict = @(model, Xtest) eigenfaces_predict(model,Xtest,1);
-
-% a Leave-One-Out Cross Validation (debug)
-cv0 = LeaveOneOutCV(X,y,fun_eigenface, fun_predict, 1)
+ if isempty(inout),
+   inout = exist('OCTAVE_VERSION','builtin') ~= 0;
+ end;
+ in = inout;
+end
