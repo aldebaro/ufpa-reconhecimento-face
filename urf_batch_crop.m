@@ -42,4 +42,5 @@ while feof(fid) == 0
 	eye0 = [ str2num(r{2}) str2num(r{3}) ];
 	eye1 = [ str2num(r{4}) str2num(r{5}) ];
 	crop(r{1}, eye0 , eye1 , top, left, dsize);
+	
 end
