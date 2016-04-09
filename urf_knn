@@ -1,0 +1,15 @@
+n = size(P,2); % retorna o número de colunas
+        if (nargin == 3) % se os argumentos da função forem iguais a 3
+        k=1;
+    elseif (k>n) % executa a função se a primeira for falsa
+        k=n;
+    end
+
+    Q = repmat(Q, 1, n); % Repete a matriz Q até ter 1 linha e n colunas
+    distances = sqrt(sum(power((P-Q),2),1)); % faz a somatória do módulo, relacionando as distâncias, a potência, a raiz e a soma
+    [distances, idx] = sort(distances); % módulo da diferença entre terreno
+    y = y(idx);
+    y = y(1:k);
+    h = histc(y,(1:max(y))); % conta o número de valores em y que estão dentro de cada intervalo especificado 
+    [v,c] = max(h); % estabelece os valores dentro dos vetores
+end      C = posição da coluna na matriz que tem mais semelhanças com a imagem sendo analisada
